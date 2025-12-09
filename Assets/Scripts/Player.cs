@@ -17,9 +17,10 @@ public class Player : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && (isGrounded = true))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(Vector3.up * fuerzaSalto, ForceMode.Impulse);
+            isGrounded = false;
         }
     }
     
@@ -40,6 +41,14 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Floor"))
         {
            isGrounded = true; 
+        }
+    }
+    
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.CompareTag("Floor"))
+        {
+            isGrounded = false;
         }
     }
     
