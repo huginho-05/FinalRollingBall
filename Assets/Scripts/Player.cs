@@ -3,9 +3,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Rigidbody rb;
-    [SerializeField] private float fuerza;
+    
+    [SerializeField] private float fuerzaMovimiento;
+    [SerializeField] private float velocidadMaxima;
     [SerializeField] private float fuerzaSalto;
     
+    private bool isGrounded;
     
     void Start()
     {
@@ -14,7 +17,7 @@ public class Player : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && (isGrounded = true))
         {
             rb.AddForce(Vector3.up * fuerzaSalto, ForceMode.Impulse);
         }
@@ -28,7 +31,16 @@ public class Player : MonoBehaviour
         
         Vector3 movementDirection  = new Vector3 (hInput, 0f, vInput).normalized;
         
-        rb.AddForce(movementDirection * fuerza, ForceMode.Force);
+        rb.AddForce(movementDirection * fuerzaMovimiento, ForceMode.Force);
         
     }
+    
+    private void OnCollisionStay(Collision other)
+    {
+        if (other.gameObject.CompareTag("Floor"))
+        {
+           isGrounded = true; 
+        }
+    }
+    
 }
