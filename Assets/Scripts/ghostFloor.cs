@@ -7,6 +7,14 @@ public class ghostFloor : MonoBehaviour
     [SerializeField] private float reaparitionTime;
     private float timer;
     private bool timerGoing;
+    private BoxCollider boxCollider;
+    private MeshRenderer meshRender;
+    
+    void Start()
+    {
+        boxCollider = GetComponent<BoxCollider>();
+        meshRender = GetComponent<MeshRenderer>();
+    }
 
     private void OnCollisionEnter(Collision other)
     {
@@ -23,21 +31,23 @@ public class ghostFloor : MonoBehaviour
             timer += Time.deltaTime;
         }
 
-        if (timer >= timeBeforeGhost && gameObject.activeSelf)
+        if (timer >= timeBeforeGhost && boxCollider.enabled)
         {
-            gameObject.SetActive(false);
+            boxCollider.enabled = false;
+            meshRender.enabled = false;
             timerGoing = false;
             timer = 0;
         }
 
-        if (!gameObject.activeSelf)
+        if (!boxCollider.enabled)
         {
             timer += Time.deltaTime;
         }
         
-        if (timer >= reaparitionTime && !gameObject.activeSelf)
+        if (timer >= reaparitionTime && !boxCollider.enabled)
         {
-            gameObject.SetActive(true);
+            boxCollider.enabled = true;
+            meshRender.enabled = true;
             timerGoing = false;
             timer = 0;
         }
