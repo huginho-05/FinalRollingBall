@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class movingPlatform : MonoBehaviour
+public class movingBehaviour : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
         
-        [SerializeField] private float speedFloor;
+        [SerializeField] private float speed;
         
         [SerializeField] private Vector3 direccionInicial;
         
@@ -23,7 +23,7 @@ public class movingPlatform : MonoBehaviour
         void Update()
         {
             timer += Time.deltaTime;
-            transform.Translate(direccionActual * speedFloor * Time.deltaTime);
+            transform.Translate(direccionActual * speed * Time.deltaTime);
             
             if (timer >= timerFloor)
             {
