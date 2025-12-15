@@ -14,4 +14,9 @@ public class torqueRotation : MonoBehaviour
         rb.AddTorque(new Vector3(spinnerForceX, spinnerForceY, spinnerForceZ), ForceMode.VelocityChange);
     }
 
+    void Update()
+    {
+
+    }
+
 }
