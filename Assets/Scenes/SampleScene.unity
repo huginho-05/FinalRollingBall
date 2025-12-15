@@ -2535,8 +2535,9 @@ GameObject:
   - component: {fileID: 2130430537}
   - component: {fileID: 2130430536}
   - component: {fileID: 2130430535}
-  - component: {fileID: 2130430534}
   - component: {fileID: 2130430538}
+  - component: {fileID: 2130430539}
+  - component: {fileID: 2130430540}
   m_Layer: 0
   m_Name: Rotator
   m_TagString: Untagged
@@ -2559,21 +2560,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1547861168}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2130430534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130430532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 205529dbf9726ee498447737c290f672, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  spinnerSpeed_X: 0
-  spinnerSpeed_Y: 0
-  spinnerSpeed_Z: 0.5
 --- !u!65 &2130430535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2664,6 +2650,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeColor
   newColor: {r: 0.9940548, g: 1, b: 0, a: 1}
+--- !u!54 &2130430539
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130430532}
+  serializedVersion: 5
+  m_Mass: 100
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 0
+--- !u!114 &2130430540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130430532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b46cdd008cfb334ab8419221fdd63ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  spinnerForceX: 0
+  spinnerForceY: 0
+  spinnerForceZ: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
