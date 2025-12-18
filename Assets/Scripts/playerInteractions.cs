@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerInteractions : MonoBehaviour
 {
@@ -19,6 +20,12 @@ public class playerInteractions : MonoBehaviour
         {
             transform.position = initialPosition;
         }
+        
+        if (other.gameObject.CompareTag("FinalTrigger"))
+        {
+            SceneManager.LoadSceneAsync(2);
+        }
     }
+
     
 }

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8514189175498674127}
   - component: {fileID: 2742421826416754601}
   - component: {fileID: 3894252285820286379}
-  - component: {fileID: 2059147802943803464}
   m_Layer: 0
   m_Name: Ghostfloor
   m_TagString: Floor
@@ -69,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 9b8a78dbb8e688e468daf2da07cf93b6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,16 +126,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   timeBeforeGhost: 1
   reaparitionTime: 2
---- !u!114 &2059147802943803464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2837410367674502731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d1573526dfc7ae4ca46e926f295f56f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ChangeColor
-  newColor: {r: 0.6567283, g: 0.8105681, b: 0.8867924, a: 1}

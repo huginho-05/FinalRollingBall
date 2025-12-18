@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4373113276457093694}
   - component: {fileID: 7361687852082211356}
   - component: {fileID: 5007550508402938563}
-  - component: {fileID: 3021849269926098701}
   m_Layer: 0
   m_Name: Lateral (1)
   m_TagString: Untagged
@@ -68,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 7dc874c331998244eaa078e5d615a6dd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,19 +111,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3021849269926098701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3678498093796512416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d1573526dfc7ae4ca46e926f295f56f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ChangeColor
-  newColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &7649449674544201582
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +124,6 @@ GameObject:
   - component: {fileID: 5688118256700590494}
   - component: {fileID: 1926832238120506717}
   - component: {fileID: 8810863831175155287}
-  - component: {fileID: 295543896911961400}
   m_Layer: 0
   m_Name: MovingPlatform
   m_TagString: Floor
@@ -196,7 +181,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f99c2f606e487bd4ba7c619b09a10f39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -255,19 +240,6 @@ MonoBehaviour:
   speed: 3
   direccionInicial: {x: 1, y: 0, z: 0}
   timerFloor: 6
---- !u!114 &295543896911961400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7649449674544201582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d1573526dfc7ae4ca46e926f295f56f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ChangeColor
-  newColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &8590891881162205408
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +252,6 @@ GameObject:
   - component: {fileID: 4886161582164467811}
   - component: {fileID: 9153594834708145159}
   - component: {fileID: 2793439252274132848}
-  - component: {fileID: 2488659693251979140}
   m_Layer: 0
   m_Name: Lateral
   m_TagString: Untagged
@@ -336,7 +307,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 7dc874c331998244eaa078e5d615a6dd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -380,16 +351,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2488659693251979140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8590891881162205408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d1573526dfc7ae4ca46e926f295f56f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ChangeColor
-  newColor: {r: 1, g: 0, b: 0, a: 1}
